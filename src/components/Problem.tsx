@@ -28,24 +28,24 @@ const Problem = () => {
 
   const problems = [
     {
-      icon: <TrendingDown size={24} className="text-red-500" />,
-      title: "Low Market Returns",
-      description: "Traditional investments often provide minimal returns, especially in today's economic climate.",
+      icon: <DollarSign size={24} className="text-red-500" />,
+      title: "High Fees Killed Profits",
+      description: "Brokers and platforms ate into your returns, leaving you with minimal gains despite market success.",
     },
     {
-      icon: <Clock size={24} className="text-amber-500" />,
-      title: "Long Lock-up Periods",
-      description: "Many investment options tie up your capital for years with penalties for early withdrawal.",
+      icon: <TrendingDown size={24} className="text-amber-500" />,
+      title: "Passive Investments Flopped",
+      description: ""Buy and hold" left you waiting years for mediocre gains while opportunities passed you by.",
     },
     {
-      icon: <DollarSign size={24} className="text-purple-500" />,
-      title: "High Management Fees",
-      description: "Investment managers typically charge 1-2% annual fees plus performance fees, eroding your returns.",
+      icon: <AlertTriangle size={24} className="text-purple-500" />,
+      title: "Complex Tools Overwhelmed You",
+      description: "Trading apps felt like rocket science, not investing, making it hard to take control of your finances.",
     },
     {
-      icon: <AlertTriangle size={24} className="text-orange-500" />,
-      title: "Lack of Transparency",
-      description: "Most funds provide limited visibility into how your money is being managed or performing.",
+      icon: <Clock size={24} className="text-orange-500" />,
+      title: "Locked-Up Capital",
+      description: "Traditional investments tie up your money for years with hefty penalties for early withdrawal.",
     }
   ];
 
@@ -57,11 +57,10 @@ const Problem = () => {
             The Problem
           </h5>
           <h2 className="section-title">
-            Why Traditional Investments <span className="gradient-text">Fall Short</span>
+            Tired of Playing Safe? <span className="gradient-text">You're Not Alone.</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            The financial landscape presents significant challenges for investors seeking reliable growth 
-            and capital security in today's market conditions.
+            You deserve better. Let's rewrite your story.
           </p>
         </div>
 

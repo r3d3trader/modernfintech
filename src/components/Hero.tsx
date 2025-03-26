@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Star, Shield, TrendingUp } from 'lucide-react';
+import { ChevronRight, Star, Shield, TrendingUp, Check } from 'lucide-react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,21 +22,36 @@ const Hero = () => {
         <div className={`w-full lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
           <div className="mb-4">
             <span className="inline-block px-4 py-1.5 bg-brand/10 text-brand rounded-full text-sm font-medium mb-6">
-              Algorithmic Stock Trading
+              AI-Powered Stock Trading
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-brand-dark mb-6">
-            Consistent Returns Through <span className="gradient-text">AI-Driven Trading</span>
+            Unlock 8-10% Monthly Returns—<span className="gradient-text">No Brokers, No Fees, Just Results.</span>
           </h1>
           
           <p className="text-lg text-gray-600 mb-8 max-w-2xl">
-            UReturns leverages advanced algorithmic trading and quantitative strategies to generate 
-            consistent monthly returns, with capital protection and quick access to your investments.
+            Let our AI-driven expert traders grow your wealth effortlessly. 
+            Start with a FREE personalized investment plan.
           </p>
+
+          <div className="space-y-3 mb-8">
+            <div className="flex items-center">
+              <Check size={20} className="text-green-600 mr-2 flex-shrink-0" />
+              <span className="text-gray-700 font-medium">Predictable Returns</span>
+            </div>
+            <div className="flex items-center">
+              <Check size={20} className="text-green-600 mr-2 flex-shrink-0" />
+              <span className="text-gray-700 font-medium">100% Capital Protection</span>
+            </div>
+            <div className="flex items-center">
+              <Check size={20} className="text-green-600 mr-2 flex-shrink-0" />
+              <span className="text-gray-700 font-medium">Withdraw in 30 Days</span>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <Link to="/contact" className="btn-primary flex items-center justify-center sm:justify-start">
-              Start Investing
+              🚀 Get Your FREE Investment Plan
               <ChevronRight size={18} className="ml-1" />
             </Link>
             <Link to="/services" className="btn-secondary flex items-center justify-center sm:justify-start">
@@ -55,7 +70,7 @@ const Hero = () => {
                 ))}
               </div>
               <span className="ml-3 text-sm text-gray-500">
-                <span className="font-medium text-brand-dark">1,500+</span> satisfied investors
+                <span className="font-medium text-brand-dark">500+</span> happy investors
               </span>
             </div>
             
@@ -66,7 +81,7 @@ const Hero = () => {
               <Star size={18} className="text-gold" fill="#ffb000" />
               <Star size={18} className="text-gold" fill="#ffb000" />
               <span className="ml-2 text-sm font-medium">
-                5.0 <span className="text-gray-500">(200+ reviews)</span>
+                5.0 <span className="text-gray-500">(500+ reviews)</span>
               </span>
             </div>
           </div>
@@ -90,7 +105,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Monthly Returns</p>
-                    <p className="text-sm font-bold text-gray-900">3-10% ROI</p>
+                    <p className="text-sm font-bold text-gray-900">8-10% ROI</p>
                   </div>
                 </div>
               </div>

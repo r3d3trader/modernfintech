@@ -30,13 +30,13 @@ const Solution = () => {
   const solutions = [
     {
       icon: <TrendingUp size={24} className="text-green-500" />,
-      title: "Consistent Monthly Returns",
-      description: "Our AI-driven algorithms generate 3-10% monthly ROI through sophisticated trading strategies.",
+      title: "AI-Driven Trading",
+      description: "Our algorithms analyze market trends in real-time, identifying opportunities faster than traditional brokers.",
     },
     {
       icon: <Shield size={24} className="text-brand" />,
       title: "Escrow Vault Protection",
-      description: "Your capital is secured in our proprietary Escrow Vault system, providing protection and peace of mind.",
+      description: "Your funds are securely held in our proprietary Escrow Vault, providing unmatched protection and peace of mind.",
     },
     {
       icon: <Timer size={24} className="text-blue-500" />,
@@ -45,8 +45,8 @@ const Solution = () => {
     },
     {
       icon: <LineChart size={24} className="text-purple-500" />,
-      title: "Transparent Performance",
-      description: "Real-time performance tracking and detailed reporting for complete investment transparency.",
+      title: "60-Day Money-Back Guarantee",
+      description: "We stand by our promises with a comprehensive 60-day money-back guarantee for complete peace of mind.",
     }
   ];
 
@@ -60,11 +60,17 @@ const Solution = () => {
               Our Solution
             </h5>
             <h2 className="section-title mb-6">
-              AI-Driven Trading <span className="gradient-text">With Capital Protection</span>
+              We Built UReturns for You— <span className="gradient-text">The Smart, Secure Way to Grow Wealth.</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              UReturns combines cutting-edge algorithmic trading with strong security measures 
-              to deliver consistent returns while protecting your investment capital.
+              Traditional investing is broken. Hidden fees, slow growth, and zero transparency? We fixed it.
+              Backed by a decade of AI-driven trading data and a UK-registered team of financial scientists, 
+              we execute 100+ tactical trades daily to maximize your returns—while you sleep.
+            </p>
+            
+            <p className="text-lg text-gray-700 font-medium mb-8">
+              Your Trust Matters: Your funds are shielded in our Escrow Vault, and we guarantee 
+              results with a 60-day money-back promise. No risks, just rewards.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -100,14 +106,14 @@ const Solution = () => {
                 <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 glass-card p-4 animate-float">
                   <div className="text-center">
                     <p className="text-sm text-gray-500">Average Monthly Return</p>
-                    <p className="text-xl font-bold text-green-600">+5.8%</p>
+                    <p className="text-xl font-bold text-green-600">+8.5%</p>
                   </div>
                 </div>
                 
                 <div className="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 glass-card p-4 animate-float" style={{ animationDelay: '1.5s' }}>
                   <div className="text-center">
                     <p className="text-sm text-gray-500">Success Rate</p>
-                    <p className="text-xl font-bold text-brand">98.2%</p>
+                    <p className="text-xl font-bold text-brand">98.7%</p>
                   </div>
                 </div>
               </div>
