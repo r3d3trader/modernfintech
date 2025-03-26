@@ -28,7 +28,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section bg-brand text-white" id="cta">
+    <section ref={sectionRef} className="section bg-[#104741] text-white" id="cta">
       <div className="container-custom">
         <div className={`text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           <div className="inline-block mb-6">

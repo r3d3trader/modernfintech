@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Services from '../components/Services';
+import InvestmentOptions from '../components/InvestmentOptions';
 import { Shield, Lock, CreditCard, BarChart4, Goal, History } from 'lucide-react';
 
 const ServicesPage = () => {
@@ -10,15 +11,15 @@ const ServicesPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-secondary to-white">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-[#104741] to-white">
         <div className="container-custom text-center">
-          <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4 animate-fade-in">
+          <h5 className="inline-block px-3 py-1 bg-white/10 text-white rounded-full text-sm font-medium mb-4 animate-fade-in">
             Our Services
           </h5>
-          <h1 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
             How We Serve You
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-10 animate-fade-in">
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto mb-10 animate-fade-in">
             UReturns provides a range of investment services designed to generate consistent returns 
             while ensuring the security of your capital.
           </p>
@@ -26,6 +27,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Investment Plans Section */}
+      <InvestmentOptions />
+
+      {/* Services Section */}
       <Services />
 
       {/* Features Section */}

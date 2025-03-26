@@ -14,6 +14,7 @@ import EscrowVault from '../components/EscrowVault';
 import TradingProcess from '../components/TradingProcess';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import InvestmentOptions from '../components/InvestmentOptions';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <Hero />
       <Problem />
       <Solution />
+      <InvestmentOptions />
       <Services />
       <Benefits />
       <Process />
