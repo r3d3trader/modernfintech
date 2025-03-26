@@ -81,16 +81,16 @@ const EscrowVault = () => {
             <div className="relative">
               <div className="w-full h-auto glass-card p-4 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1586486855514-8c367fe6a150?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Escrow Vault Security"
+                  src="/lovable-uploads/0fbb8e87-e78a-4741-bb21-4ba9de43ced9.png" 
+                  alt="Escrow Vault Security" 
                   className="w-full h-auto rounded-lg object-cover shadow-inner"
                 />
                 
-                <div className="absolute inset-0 bg-gradient-to-br from-brand/40 to-transparent rounded-lg flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand/30 to-transparent rounded-lg flex items-center justify-center">
                   <div className="glass-card p-6 text-center max-w-xs">
-                    <Shield size={48} className="text-white mb-4 mx-auto" />
-                    <h3 className="text-xl font-bold text-white mb-2">Escrow Vault Protected</h3>
-                    <p className="text-white/90">Your investment is secured by our proprietary protection system</p>
+                    <Shield size={48} className="text-brand mb-4 mx-auto" />
+                    <h3 className="text-xl font-bold text-brand-dark mb-2">Escrow Vault Protected</h3>
+                    <p className="text-gray-700">Your investment is secured by our proprietary protection system</p>
                   </div>
                 </div>
               </div>
