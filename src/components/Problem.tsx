@@ -53,7 +53,7 @@ const Problem = () => {
     <section ref={sectionRef} className="section bg-white" id="problem">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
+          <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4 animate-pulse">
             The Problem
           </h5>
           <h2 className="section-title">
@@ -68,11 +68,11 @@ const Problem = () => {
           {problems.map((problem, index) => (
             <div 
               key={index}
-              className={`glass-card p-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+              className={`glass-card p-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'} transform hover:scale-[1.03] transition-transform duration-300`}
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="flex items-start">
-                <div className="icon-wrapper">{problem.icon}</div>
+                <div className="icon-wrapper animate-pulse">{problem.icon}</div>
                 <div className="ml-5">
                   <h3 className="text-xl font-semibold text-brand-dark mb-2">{problem.title}</h3>
                   <p className="text-gray-600">{problem.description}</p>

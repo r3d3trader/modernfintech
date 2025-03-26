@@ -21,7 +21,7 @@ const Hero = () => {
         {/* Text Content */}
         <div className={`w-full lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
           <div className="mb-4">
-            <span className="inline-block px-4 py-1.5 bg-brand/10 text-brand rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1.5 bg-brand/10 text-brand rounded-full text-sm font-medium mb-6 animate-pulse">
               AI-Powered Stock Trading
             </span>
           </div>
@@ -35,36 +35,36 @@ const Hero = () => {
           </p>
 
           <div className="space-y-3 mb-8">
-            <div className="flex items-center">
+            <div className="flex items-center transform hover:translate-x-1 transition-transform duration-300">
               <Check size={20} className="text-green-600 mr-2 flex-shrink-0" />
               <span className="text-gray-700 font-medium">Predictable Returns</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center transform hover:translate-x-1 transition-transform duration-300">
               <Check size={20} className="text-green-600 mr-2 flex-shrink-0" />
               <span className="text-gray-700 font-medium">100% Capital Protection</span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center transform hover:translate-x-1 transition-transform duration-300">
               <Check size={20} className="text-green-600 mr-2 flex-shrink-0" />
               <span className="text-gray-700 font-medium">Withdraw in 30 Days</span>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <Link to="/contact" className="btn-primary flex items-center justify-center sm:justify-start">
+            <Link to="/contact" className="btn-primary flex items-center justify-center sm:justify-start hover:scale-105 transition-transform duration-300 group animate-pulse">
               🚀 Get Your FREE Investment Plan
-              <ChevronRight size={18} className="ml-1" />
+              <ChevronRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            <Link to="/services" className="btn-secondary flex items-center justify-center sm:justify-start">
+            <Link to="/services" className="btn-secondary flex items-center justify-center sm:justify-start hover:scale-105 transition-transform duration-300">
               Explore Plans
             </Link>
           </div>
 
           {/* Social Proof */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 p-4 bg-white rounded-lg shadow-sm">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="flex items-center">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs font-medium text-gray-600">
+                  <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs font-medium text-gray-600 hover:scale-110 transition-transform duration-300">
                     {String.fromCharCode(64 + i)}
                   </div>
                 ))}
@@ -75,11 +75,13 @@ const Hero = () => {
             </div>
             
             <div className="flex items-center">
-              <Star size={18} className="text-gold" fill="#ffb000" />
-              <Star size={18} className="text-gold" fill="#ffb000" />
-              <Star size={18} className="text-gold" fill="#ffb000" />
-              <Star size={18} className="text-gold" fill="#ffb000" />
-              <Star size={18} className="text-gold" fill="#ffb000" />
+              <div className="flex animate-float" style={{ animationDelay: '0.1s' }}>
+                <Star size={18} className="text-gold" fill="#ffb000" />
+                <Star size={18} className="text-gold" fill="#ffb000" />
+                <Star size={18} className="text-gold" fill="#ffb000" />
+                <Star size={18} className="text-gold" fill="#ffb000" />
+                <Star size={18} className="text-gold" fill="#ffb000" />
+              </div>
               <span className="ml-2 text-sm font-medium">
                 5.0 <span className="text-gray-500">(500+ reviews)</span>
               </span>
@@ -90,7 +92,7 @@ const Hero = () => {
         {/* Image/Visualization */}
         <div className={`w-full lg:w-1/2 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
           <div className="relative">
-            <div className="glass-card rounded-xl overflow-hidden shadow-xl">
+            <div className="glass-card rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-[1.02] transition-transform duration-500">
               <img 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" 
                 alt="AI-Driven Trading Platform" 

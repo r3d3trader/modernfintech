@@ -32,7 +32,7 @@ const EscrowVault = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
           <div className={`w-full lg:w-1/2 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
-            <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
+            <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4 animate-pulse">
               Capital Protection
             </h5>
             <h2 className="section-title mb-6">
@@ -44,8 +44,8 @@ const EscrowVault = () => {
             </p>
             
             <div className="space-y-6 mb-8">
-              <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start transform hover:translate-x-2 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 animate-pulse">
                   <Shield size={24} className="text-brand" />
                 </div>
                 <div className="ml-4">
@@ -54,8 +54,8 @@ const EscrowVault = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start transform hover:translate-x-2 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 animate-pulse" style={{ animationDelay: '0.5s' }}>
                   <LockKeyhole size={24} className="text-brand" />
                 </div>
                 <div className="ml-4">
@@ -64,8 +64,8 @@ const EscrowVault = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start transform hover:translate-x-2 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 animate-pulse" style={{ animationDelay: '1s' }}>
                   <BadgeCheck size={24} className="text-brand" />
                 </div>
                 <div className="ml-4">
@@ -79,7 +79,7 @@ const EscrowVault = () => {
           {/* Image/Visualization Side */}
           <div className={`w-full lg:w-1/2 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
             <div className="relative">
-              <div className="w-full h-auto glass-card p-4 overflow-hidden">
+              <div className="w-full h-auto glass-card p-4 overflow-hidden transform hover:scale-[1.02] transition-transform duration-500 hover:shadow-xl">
                 <img 
                   src="/lovable-uploads/0fbb8e87-e78a-4741-bb21-4ba9de43ced9.png" 
                   alt="Escrow Vault Security" 
@@ -87,7 +87,7 @@ const EscrowVault = () => {
                 />
                 
                 <div className="absolute inset-0 bg-gradient-to-br from-brand/30 to-transparent rounded-lg flex items-center justify-center">
-                  <div className="glass-card p-6 text-center max-w-xs">
+                  <div className="glass-card p-6 text-center max-w-xs animate-float">
                     <Shield size={48} className="text-brand mb-4 mx-auto" />
                     <h3 className="text-xl font-bold text-brand-dark mb-2">Escrow Vault Protected</h3>
                     <p className="text-gray-700">Your investment is secured by our proprietary protection system</p>

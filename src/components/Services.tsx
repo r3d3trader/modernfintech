@@ -49,7 +49,7 @@ const Services = () => {
     <section ref={sectionRef} className="section bg-white" id="services">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
+          <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4 animate-pulse">
             Our Services
           </h5>
           <h2 className="section-title">
@@ -64,11 +64,11 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`glass-card text-center p-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+              className={`glass-card text-center p-8 ${isVisible ? 'animate-fade-in' : 'opacity-0'} hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 transition-transform duration-500`}
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 rounded-full bg-brand/10 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-brand/10 flex items-center justify-center animate-float" style={{ animationDelay: `${index * 0.5}s` }}>
                   {service.icon}
                 </div>
               </div>
@@ -76,10 +76,10 @@ const Services = () => {
               <p className="text-gray-600 mb-6">{service.description}</p>
               <Link 
                 to="/services" 
-                className="text-brand font-medium flex items-center justify-center hover:text-brand-dark transition-colors"
+                className="text-brand font-medium flex items-center justify-center hover:text-brand-dark transition-colors group"
               >
                 Learn More
-                <svg className="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="ml-1 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </Link>

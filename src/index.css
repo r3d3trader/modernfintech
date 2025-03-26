@@ -106,6 +106,16 @@
   .gradient-text {
     @apply bg-gradient-to-r from-brand to-teal-500 bg-clip-text text-transparent;
   }
+  
+  /* Shimmer animation */
+  .shimmer {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/70 before:to-transparent;
+  }
+  
+  /* Button hover effect */
+  .btn-hover-effect {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:bg-white/20 before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500;
+  }
 }
 
 /* Transition classes */
@@ -129,4 +139,24 @@
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 300ms, transform 300ms;
+}
+
+/* Enhanced animations */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes highlight-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 176, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 176, 0, 0);
+  }
+}
+
+.highlight-pulse {
+  animation: highlight-pulse 2s infinite;
 }
