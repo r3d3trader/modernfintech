@@ -35,7 +35,7 @@ const Problem = () => {
     {
       icon: <TrendingDown size={24} className="text-amber-500" />,
       title: "Passive Investments Flopped",
-      description: ""Buy and hold" left you waiting years for mediocre gains while opportunities passed you by.",
+      description: "\"Buy and hold\" left you waiting years for mediocre gains while opportunities passed you by.",
     },
     {
       icon: <AlertTriangle size={24} className="text-purple-500" />,
