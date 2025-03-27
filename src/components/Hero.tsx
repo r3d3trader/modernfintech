@@ -77,7 +77,7 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Updated Social Proof - New structure */}
+          {/* Updated Social Proof with new structure */}
           <div className="flex flex-col p-4 bg-white/10 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
             {/* Stars only on top */}
             <div className="flex justify-center mb-3">
@@ -90,19 +90,19 @@ const Hero = () => {
             <div className="flex flex-col items-center">
               <div className="flex -space-x-3 mb-2">
                 <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
-                  <AvatarImage src="/lovable-uploads/7b537df5-95c7-4729-a0c5-e961879bb755.png" alt="Profile A" />
+                  <AvatarImage src="/lovable-uploads/41b5f8af-c47a-47e5-9f10-d5b72e0177d0.png" alt="Profile A" />
                   <AvatarFallback className="bg-brand-light text-white">A</AvatarFallback>
                 </Avatar>
                 <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
-                  <AvatarImage src="/lovable-uploads/a7b15b9b-bbc3-49d8-8e32-674b3c0614f4.png" alt="Profile B" />
+                  <AvatarImage src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=150&q=80" alt="Profile B" />
                   <AvatarFallback className="bg-brand-light text-white">B</AvatarFallback>
                 </Avatar>
                 <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
-                  <AvatarImage src="/lovable-uploads/a3517571-2194-4ba3-b0d9-cfcfa3a4c43f.png" alt="Profile C" />
+                  <AvatarImage src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=150&q=80" alt="Profile C" />
                   <AvatarFallback className="bg-brand-light text-white">C</AvatarFallback>
                 </Avatar>
                 <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
-                  <AvatarImage src="/lovable-uploads/0fbb8e87-e78a-4741-bb21-4ba9de43ced9.png" alt="Profile D" />
+                  <AvatarImage src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Profile D" />
                   <AvatarFallback className="bg-brand-light text-white">D</AvatarFallback>
                 </Avatar>
               </div>
@@ -114,7 +114,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Image/Visualization */}
+        {/* Image/Visualization - Made larger */}
         <div className={`w-full lg:w-3/5 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
           <div className="relative">
             <div className="glass-card rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-[1.02] transition-transform duration-500">
@@ -122,6 +122,7 @@ const Hero = () => {
                 src="/lovable-uploads/a7b15b9b-bbc3-49d8-8e32-674b3c0614f4.png" 
                 alt="Father and son saving money together" 
                 className="w-full h-auto rounded-xl object-cover"
+                style={{ maxHeight: "500px" }}  /* Increased the height */
               />
               
               <div className="absolute inset-0 bg-gradient-to-t from-[#104741]/60 to-transparent rounded-xl"></div>
@@ -155,7 +156,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Wave shape divider - Adjusted to be even lower for better visibility of ratings */}
+      {/* Wave shape divider */}
       <div className="absolute bottom-0 left-0 w-full">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto translate-y-[150px] lg:translate-y-[180px]">
           <path 
