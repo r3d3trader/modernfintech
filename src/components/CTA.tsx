@@ -28,13 +28,25 @@ const CTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section bg-[#104741] text-white" id="cta">
-      <div className="container-custom">
-        <div className={`text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+    <section ref={sectionRef} className="section bg-[#104741] text-white relative" id="cta">
+      {/* Background texture */}
+      <div className="absolute inset-0 opacity-10">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="ctaPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M0 20 L40 20 M20 0 L20 40" stroke="white" strokeWidth="0.5" fill="none" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#ctaPattern)" />
+        </svg>
+      </div>
+      
+      <div className="container-custom relative z-10">
+        <div className={`text-center mx-auto max-w-3xl ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           <div className="inline-block mb-6">
-            <Sparkles size={32} className="text-gold animate-pulse mx-auto" />
+            <Sparkles size={32} className="text-gold mx-auto" />
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-float">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Your Future Self Will Thank You
           </h2>
           <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto">
@@ -42,7 +54,7 @@ const CTA = () => {
           </p>
           
           <div className="inline-block relative">
-            <div className="absolute -top-10 -right-10 bg-gold text-brand-dark text-sm font-bold px-3 py-1 rounded-full animate-pulse">
+            <div className="absolute -top-10 -right-10 bg-gold text-brand-dark text-sm font-bold px-3 py-1 rounded-full">
               Limited Time Offer!
             </div>
             <Link 

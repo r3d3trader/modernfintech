@@ -50,10 +50,20 @@ const Problem = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="section bg-white" id="problem">
-      <div className="container-custom">
+    <section ref={sectionRef} className="section bg-white relative" id="problem">
+      {/* Background texture */}
+      <div className="absolute inset-0 opacity-5">
+        <svg width="100%" height="100%">
+          <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="1.5" fill="#104741" />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
-          <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4 animate-pulse">
+          <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
             The Problem
           </h5>
           <h2 className="section-title">
@@ -72,7 +82,7 @@ const Problem = () => {
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="flex items-start">
-                <div className="icon-wrapper animate-pulse">{problem.icon}</div>
+                <div className="icon-wrapper">{problem.icon}</div>
                 <div className="ml-5">
                   <h3 className="text-xl font-semibold text-brand-dark mb-2">{problem.title}</h3>
                   <p className="text-gray-600">{problem.description}</p>

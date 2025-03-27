@@ -51,8 +51,20 @@ const Solution = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="section bg-gradient-to-b from-white to-secondary/30" id="solution">
-      <div className="container-custom">
+    <section ref={sectionRef} className="section bg-[#f2f2f2] relative" id="solution">
+      {/* Background texture */}
+      <div className="absolute inset-0 opacity-10">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="diagonalHatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="10" style={{ stroke: '#333', strokeWidth: 1 }} />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#diagonalHatch)" />
+        </svg>
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left Content */}
           <div className={`w-full lg:w-1/2 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
@@ -103,14 +115,14 @@ const Solution = () => {
                 />
                 
                 {/* Stats overlay */}
-                <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 glass-card p-4 animate-float">
+                <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 glass-card p-4">
                   <div className="text-center">
                     <p className="text-sm text-gray-500">Average Monthly Return</p>
                     <p className="text-xl font-bold text-green-600">+8.5%</p>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 glass-card p-4 animate-float" style={{ animationDelay: '1.5s' }}>
+                <div className="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 glass-card p-4">
                   <div className="text-center">
                     <p className="text-sm text-gray-500">Success Rate</p>
                     <p className="text-xl font-bold text-brand">98.7%</p>

@@ -46,8 +46,8 @@ const Navbar = () => {
           to="/" 
           className="flex items-center"
         >
-          <span className="text-xl md:text-2xl font-bold text-brand-dark">
-            <span className="text-brand">U</span>Returns
+          <span className={`text-xl md:text-2xl font-bold ${scrolled ? 'text-brand-dark' : 'text-white'}`}>
+            <span className={scrolled ? 'text-brand' : 'text-gold'}>U</span>Returns
           </span>
         </Link>
 
@@ -58,9 +58,11 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={`font-medium transition-all duration-300 ${
-                location.pathname === link.path
-                  ? 'text-brand'
-                  : 'text-gray-600 hover:text-brand'
+                scrolled 
+                  ? location.pathname === link.path
+                    ? 'text-brand'
+                    : 'text-gray-600 hover:text-brand'
+                  : 'text-white hover:text-gold'
               }`}
             >
               {link.name}
@@ -77,7 +79,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700 focus:outline-none"
+          className={`md:hidden focus:outline-none ${scrolled ? 'text-gray-700' : 'text-white'}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (

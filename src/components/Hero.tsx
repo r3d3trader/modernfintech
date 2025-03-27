@@ -17,16 +17,32 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden bg-[#104741]">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" strokeWidth="0.5" />
+            </pattern>
+            <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+              <rect width="80" height="80" fill="url(#smallGrid)" />
+              <path d="M 80 0 L 0 0 0 80" fill="none" stroke="white" strokeWidth="1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
       <div className="container-custom mx-auto flex flex-col lg:flex-row items-center">
         {/* Text Content */}
         <div className={`w-full lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
           <div className="mb-4">
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-6 animate-pulse">
+            <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-6">
               AI-Powered Stock Trading
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-            Unlock 8-10% Monthly Returns—<span className="text-gold animate-pulse">No Brokers, No Fees, Just Results.</span>
+            Unlock 8-10% Monthly Returns—<span className="text-gold">No Brokers, No Fees, Just Results.</span>
           </h1>
           
           <p className="text-lg text-gray-200 mb-8 max-w-2xl">
@@ -50,7 +66,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <Link to="/contact" className="btn-primary flex items-center justify-center sm:justify-start hover:scale-105 transition-transform duration-300 group animate-pulse">
+            <Link to="/contact" className="btn-primary flex items-center justify-center sm:justify-start transition-transform duration-300 group">
               🚀 Get Your FREE Investment Plan
               <ChevronRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
@@ -75,7 +91,7 @@ const Hero = () => {
             </div>
             
             <div className="flex items-center">
-              <div className="flex animate-float" style={{ animationDelay: '0.1s' }}>
+              <div className="flex">
                 <Star size={18} className="text-gold" fill="#ffb000" />
                 <Star size={18} className="text-gold" fill="#ffb000" />
                 <Star size={18} className="text-gold" fill="#ffb000" />
@@ -89,8 +105,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Image/Visualization */}
-        <div className={`w-full lg:w-1/2 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
+        {/* Image/Visualization - Made bigger */}
+        <div className={`w-full lg:w-3/5 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
           <div className="relative">
             <div className="glass-card rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-[1.02] transition-transform duration-500">
               <img 
@@ -102,7 +118,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#104741]/60 to-transparent rounded-xl"></div>
               
               {/* Floating stat cards */}
-              <div className="absolute top-10 -left-5 glass-card p-3 px-4 shadow-lg animate-float">
+              <div className="absolute top-10 -left-5 glass-card p-3 px-4 shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
                     <TrendingUp size={16} className="text-green-600" />
@@ -114,7 +130,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute bottom-16 -right-5 glass-card p-3 px-4 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
+              <div className="absolute bottom-16 -right-5 glass-card p-3 px-4 shadow-lg" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
                     <Shield size={16} className="text-brand" />

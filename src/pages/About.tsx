@@ -26,8 +26,20 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
+      <section className="py-20 bg-[#f2f2f2] relative">
+        {/* Background texture */}
+        <div className="absolute inset-0 opacity-10">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="teamPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 15,0 0,15 15,30 30,15 Z" fill="none" stroke="#104741" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#teamPattern)" />
+          </svg>
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
               Our Team
@@ -41,31 +53,41 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Team Member Cards */}
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="glass-card p-6 text-center animate-fade-in" style={{ animationDelay: `${i * 0.15}s` }}>
-                <div className="w-24 h-24 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden">
-                  <img 
-                    src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'men' : 'women'}/${i+10}.jpg`} 
-                    alt="Team Member" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-brand-dark mb-1">Team Member {i}</h3>
-                <p className="text-brand mb-3">Senior {i === 1 ? 'Analyst' : i === 2 ? 'Data Scientist' : 'Trader'}</p>
-                <p className="text-gray-600 text-sm">
-                  With over 10 years of experience in financial markets and algorithmic trading strategies.
-                </p>
-              </div>
-            ))}
+          <div className="glass-card p-6 mb-8 overflow-hidden">
+            <img 
+              src="/lovable-uploads/a3517571-2194-4ba3-b0d9-cfcfa3a4c43f.png" 
+              alt="UReturns Team" 
+              className="w-full h-auto rounded-lg shadow-md"
+            />
+            <div className="text-center mt-6">
+              <h3 className="text-xl font-semibold text-brand-dark">The UReturns Team</h3>
+              <p className="text-brand-medium mt-2">A team of experts with over 50 years of combined trading experience</p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-10">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Our diverse team brings together expertise from various fields including finance, 
+              data science, machine learning, and market analysis. Together, we've developed 
+              proprietary algorithms that consistently outperform traditional investment methods.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-secondary/30">
-        <div className="container-custom">
+      <section className="py-20 bg-white relative">
+        {/* Background texture */}
+        <div className="absolute inset-0 opacity-5">
+          <svg width="100%" height="100%">
+            <pattern id="storyDots" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="10" cy="10" r="1" fill="#104741" />
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#storyDots)" />
+          </svg>
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-left">
               <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
@@ -104,8 +126,20 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
+      <section className="py-20 bg-[#f2f2f2] relative">
+        {/* Background texture */}
+        <div className="absolute inset-0 opacity-10">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="missionPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M0 20 L40 20 M20 0 L20 40" stroke="#104741" strokeWidth="0.5" fill="none" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#missionPattern)" />
+          </svg>
+        </div>
+        
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
               Our Mission
@@ -154,8 +188,20 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-brand-dark text-white">
-        <div className="container-custom text-center">
+      <section className="py-20 bg-brand-dark text-white relative">
+        {/* Background texture */}
+        <div className="absolute inset-0 opacity-10">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="ctaAboutPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M0 20 L40 20 M20 0 L20 40" stroke="white" strokeWidth="0.5" fill="none" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#ctaAboutPattern)" />
+          </svg>
+        </div>
+        
+        <div className="container-custom text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
             Ready to Start Your Investment Journey?
           </h2>

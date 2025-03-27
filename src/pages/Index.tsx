@@ -23,15 +23,25 @@ const Index = () => {
       <Hero />
       <Problem />
       <Solution />
-      <InvestmentOptions />
+      <div className="bg-[#f2f2f2]">
+        <InvestmentOptions />
+      </div>
       <Services />
-      <Benefits />
+      <div className="bg-[#f2f2f2]">
+        <Benefits />
+      </div>
       <Process />
-      <Testimonials />
+      <div className="bg-[#f2f2f2]">
+        <Testimonials />
+      </div>
       <Features />
-      <Withdrawals />
+      <div className="bg-[#f2f2f2]">
+        <Withdrawals />
+      </div>
       <EscrowVault />
-      <TradingProcess />
+      <div className="bg-[#f2f2f2]">
+        <TradingProcess />
+      </div>
       <FAQ />
       <CTA />
       <Footer />
