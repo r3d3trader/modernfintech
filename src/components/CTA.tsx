@@ -54,7 +54,7 @@ const CTA = () => {
           </p>
           
           <div className="inline-block relative">
-            <div className="absolute -top-10 -right-10 bg-gold text-brand-dark text-sm font-bold px-3 py-1 rounded-full">
+            <div className="absolute left-1/2 -translate-x-1/2 -top-10 bg-gold text-brand-dark text-sm font-bold px-3 py-1 rounded-full whitespace-nowrap">
               Limited Time Offer!
             </div>
             <Link 

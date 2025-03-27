@@ -38,7 +38,7 @@ const Hero = () => {
         <div className={`w-full lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 ${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
           <div className="mb-4">
             <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-6">
-              AI-Powered Stock Trading
+              Smart Investments
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
@@ -146,9 +146,9 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Wave shape divider */}
+      {/* Wave shape divider - Adjusted to be 35px lower on desktop */}
       <div className="absolute bottom-0 left-0 w-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto translate-y-[35px] lg:translate-y-[35px]">
           <path 
             fill="#ffffff" 
             fillOpacity="1" 
