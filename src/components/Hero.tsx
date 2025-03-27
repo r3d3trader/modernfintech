@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Star, Shield, TrendingUp, Check } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,7 +66,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Modified: Buttons stacked vertically with space between */}
+          {/* Buttons stacked vertically with space between */}
           <div className="flex flex-col gap-4 mb-10">
             <Link to="/contact" className="btn-primary flex items-center justify-center transition-transform duration-300 group">
               🚀 Get Your FREE Investment Plan
@@ -76,37 +77,44 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Social Proof */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 p-4 bg-white/10 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-            <div className="flex items-center">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-brand-light/80 border-2 border-white flex items-center justify-center text-xs font-medium text-white hover:scale-110 transition-transform duration-300">
-                    {String.fromCharCode(64 + i)}
-                  </div>
-                ))}
-              </div>
-              <span className="ml-3 text-sm text-gray-200">
-                <span className="font-medium text-white">500+</span> happy investors
-              </span>
+          {/* Updated Social Proof - New structure */}
+          <div className="flex flex-col p-4 bg-white/10 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            {/* Stars only on top */}
+            <div className="flex justify-center mb-3">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} size={24} className="text-gold mx-0.5" fill="#ffb000" />
+              ))}
             </div>
             
-            <div className="flex items-center">
-              <div className="flex">
-                <Star size={18} className="text-gold" fill="#ffb000" />
-                <Star size={18} className="text-gold" fill="#ffb000" />
-                <Star size={18} className="text-gold" fill="#ffb000" />
-                <Star size={18} className="text-gold" fill="#ffb000" />
-                <Star size={18} className="text-gold" fill="#ffb000" />
+            {/* Profile images with count underneath */}
+            <div className="flex flex-col items-center">
+              <div className="flex -space-x-3 mb-2">
+                <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
+                  <AvatarImage src="/lovable-uploads/7b537df5-95c7-4729-a0c5-e961879bb755.png" alt="Profile A" />
+                  <AvatarFallback className="bg-brand-light text-white">A</AvatarFallback>
+                </Avatar>
+                <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
+                  <AvatarImage src="/lovable-uploads/a7b15b9b-bbc3-49d8-8e32-674b3c0614f4.png" alt="Profile B" />
+                  <AvatarFallback className="bg-brand-light text-white">B</AvatarFallback>
+                </Avatar>
+                <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
+                  <AvatarImage src="/lovable-uploads/a3517571-2194-4ba3-b0d9-cfcfa3a4c43f.png" alt="Profile C" />
+                  <AvatarFallback className="bg-brand-light text-white">C</AvatarFallback>
+                </Avatar>
+                <Avatar className="border-2 border-white w-10 h-10 hover:scale-110 transition-transform duration-300">
+                  <AvatarImage src="/lovable-uploads/0fbb8e87-e78a-4741-bb21-4ba9de43ced9.png" alt="Profile D" />
+                  <AvatarFallback className="bg-brand-light text-white">D</AvatarFallback>
+                </Avatar>
               </div>
-              <span className="ml-2 text-sm font-medium text-white">
-                5.0 <span className="text-gray-300">(500+ reviews)</span>
+              
+              <span className="text-center text-white font-medium">
+                726+ Happy Investors
               </span>
             </div>
           </div>
         </div>
 
-        {/* Image/Visualization - Made bigger */}
+        {/* Image/Visualization */}
         <div className={`w-full lg:w-3/5 ${isVisible ? 'animate-fade-in-right' : 'opacity-0'}`}>
           <div className="relative">
             <div className="glass-card rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-[1.02] transition-transform duration-500">
@@ -147,9 +155,9 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Wave shape divider - Adjusted to be 35px lower on desktop and positioned correctly */}
+      {/* Wave shape divider - Adjusted to be even lower for better visibility of ratings */}
       <div className="absolute bottom-0 left-0 w-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto translate-y-[80px] lg:translate-y-[120px]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto translate-y-[150px] lg:translate-y-[180px]">
           <path 
             fill="#ffffff" 
             fillOpacity="1" 
