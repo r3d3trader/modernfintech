@@ -65,12 +65,13 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <Link to="/contact" className="btn-primary flex items-center justify-center sm:justify-start transition-transform duration-300 group">
+          {/* Modified: Buttons stacked vertically with space between */}
+          <div className="flex flex-col gap-4 mb-10">
+            <Link to="/contact" className="btn-primary flex items-center justify-center transition-transform duration-300 group">
               🚀 Get Your FREE Investment Plan
               <ChevronRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            <Link to="/services" className="bg-transparent border-2 border-white text-white font-medium px-6 py-2.5 rounded-md transition-all duration-300 hover:bg-white/10 flex items-center justify-center sm:justify-start hover:scale-105">
+            <Link to="/services" className="bg-transparent border-2 border-white text-white font-medium px-6 py-2.5 rounded-md transition-all duration-300 hover:bg-white/10 flex items-center justify-center hover:scale-105">
               Explore Plans
             </Link>
           </div>
@@ -146,9 +147,9 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Wave shape divider - Adjusted to be 35px lower on desktop */}
+      {/* Wave shape divider - Adjusted to be 35px lower on desktop and positioned correctly */}
       <div className="absolute bottom-0 left-0 w-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto translate-y-[35px] lg:translate-y-[35px]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto translate-y-[80px] lg:translate-y-[120px]">
           <path 
             fill="#ffffff" 
             fillOpacity="1" 
