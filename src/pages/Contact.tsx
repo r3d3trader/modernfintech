@@ -1,29 +1,30 @@
-
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Mail, Phone, MapPin, Send, Loader2, Check } from 'lucide-react';
-
 const Contact = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     phone: '',
-    message: '',
+    message: ''
   });
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormState((prev) => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormState(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -32,18 +33,16 @@ const Contact = () => {
         name: '',
         email: '',
         phone: '',
-        message: '',
+        message: ''
       });
-      
+
       // Reset submission status after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
     }, 1500);
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navbar />
 
       {/* Hero Section */}
@@ -123,10 +122,9 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="animate-fade-in-right">
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-bold text-brand-dark mb-6">Send Us a Message</h3>
+                <h3 className="text-2xl font-bold text-brand-dark mb-6 text-center">Send Us a Message</h3>
                 
-                {isSubmitted ? (
-                  <div className="flex flex-col items-center justify-center py-12 text-center">
+                {isSubmitted ? <div className="flex flex-col items-center justify-center py-12 text-center">
                     <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
                       <Check size={32} className="text-green-600" />
                     </div>
@@ -134,40 +132,20 @@ const Contact = () => {
                     <p className="text-gray-600 mb-6">
                       Thank you for reaching out. We'll get back to you shortly.
                     </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit}>
+                  </div> : <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                           Full Name *
                         </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={formState.name}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all"
-                          placeholder="John Doe"
-                        />
+                        <input type="text" id="name" name="name" value={formState.name} onChange={handleChange} required className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all" placeholder="John Doe" />
                       </div>
                       
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                           Email Address *
                         </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formState.email}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all"
-                          placeholder="john@example.com"
-                        />
+                        <input type="email" id="email" name="email" value={formState.email} onChange={handleChange} required className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all" placeholder="john@example.com" />
                       </div>
                     </div>
                     
@@ -175,52 +153,26 @@ const Contact = () => {
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                         Phone Number
                       </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formState.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all"
-                        placeholder="+1 (555) 123-4567"
-                      />
+                      <input type="tel" id="phone" name="phone" value={formState.phone} onChange={handleChange} className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all" placeholder="+1 (555) 123-4567" />
                     </div>
                     
                     <div className="mb-6">
                       <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                         Message *
                       </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formState.message}
-                        onChange={handleChange}
-                        required
-                        rows={5}
-                        className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all"
-                        placeholder="How can we help you today?"
-                      ></textarea>
+                      <textarea id="message" name="message" value={formState.message} onChange={handleChange} required rows={5} className="w-full px-4 py-2 rounded-md border border-gray-300 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all" placeholder="How can we help you today?"></textarea>
                     </div>
                     
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="btn-primary w-full flex items-center justify-center"
-                    >
-                      {isSubmitting ? (
-                        <>
+                    <button type="submit" disabled={isSubmitting} className="btn-primary w-full flex items-center justify-center">
+                      {isSubmitting ? <>
                           <Loader2 size={20} className="animate-spin mr-2" />
                           Sending...
-                        </>
-                      ) : (
-                        <>
+                        </> : <>
                           <Send size={20} className="mr-2" />
                           Send Message
-                        </>
-                      )}
+                        </>}
                     </button>
-                  </form>
-                )}
+                  </form>}
               </div>
             </div>
           </div>
@@ -248,7 +200,9 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="glass-card p-6 animate-fade-in" style={{ animationDelay: '0.15s' }}>
+            <div className="glass-card p-6 animate-fade-in" style={{
+            animationDelay: '0.15s'
+          }}>
               <h3 className="text-xl font-semibold text-brand-dark mb-4">What is the minimum investment?</h3>
               <p className="text-gray-600">
                 Our Starter plan begins at $5,000. The Growth plan requires a minimum of $25,000, 
@@ -256,7 +210,9 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="glass-card p-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="glass-card p-6 animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               <h3 className="text-xl font-semibold text-brand-dark mb-4">How soon can I withdraw funds?</h3>
               <p className="text-gray-600">
                 Standard plans allow withdrawals after 30 days. Elite plan members can withdraw 
@@ -264,7 +220,9 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="glass-card p-6 animate-fade-in" style={{ animationDelay: '0.45s' }}>
+            <div className="glass-card p-6 animate-fade-in" style={{
+            animationDelay: '0.45s'
+          }}>
               <h3 className="text-xl font-semibold text-brand-dark mb-4">Is my investment secure?</h3>
               <p className="text-gray-600">
                 Yes, your capital is protected by our Escrow Vault system, and new investors 
@@ -276,8 +234,6 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
