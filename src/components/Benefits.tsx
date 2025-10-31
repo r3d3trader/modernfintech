@@ -45,7 +45,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="section bg-gradient-to-b from-white to-secondary/30" id="benefits">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-white to-secondary/30" id="benefits">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4">
@@ -59,7 +59,7 @@ const Benefits = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
             <div 
               key={index}

@@ -26,7 +26,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-[#f2f2f2] relative">
+      <section className="py-20 bg-secondary/30 relative">
         {/* Background texture */}
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +126,7 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-[#f2f2f2] relative">
+      <section className="py-20 bg-secondary/30 relative">
         {/* Background texture */}
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">

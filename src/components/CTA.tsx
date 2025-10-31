@@ -28,7 +28,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section bg-[#104741] text-white relative" id="cta">
+    <section ref={sectionRef} className="py-20 bg-brand-medium text-white relative" id="cta">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">

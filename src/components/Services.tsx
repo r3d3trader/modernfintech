@@ -46,7 +46,7 @@ const Services = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="section bg-white" id="services">
+    <section ref={sectionRef} className="py-20 bg-white" id="services">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h5 className="inline-block px-3 py-1 bg-brand/10 text-brand rounded-full text-sm font-medium mb-4 animate-pulse">

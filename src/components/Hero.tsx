@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden bg-[#104741]">
+    <div className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 overflow-hidden bg-brand-medium">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +125,7 @@ const Hero = () => {
                 style={{ maxHeight: "500px" }}  /* Increased the height */
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-[#104741]/60 to-transparent rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-medium/60 to-transparent rounded-xl"></div>
               
               {/* Floating stat cards */}
               <div className="absolute top-10 -left-5 glass-card p-3 px-4 shadow-lg">

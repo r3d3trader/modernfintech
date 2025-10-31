@@ -23,23 +23,23 @@ const Index = () => {
       <Hero />
       <Problem />
       <Solution />
-      <div className="bg-[#f2f2f2]">
+      <div className="bg-secondary/30">
         <InvestmentOptions />
       </div>
       <Services />
-      <div className="bg-[#f2f2f2]">
+      <div className="bg-secondary/30">
         <Benefits />
       </div>
       <Process />
-      <div className="bg-[#f2f2f2]">
+      <div className="bg-secondary/30">
         <Testimonials />
       </div>
       <Features />
-      <div className="bg-[#f2f2f2]">
+      <div className="bg-secondary/30">
         <Withdrawals />
       </div>
       <EscrowVault />
-      <div className="bg-[#f2f2f2]">
+      <div className="bg-secondary/30">
         <TradingProcess />
       </div>
       <FAQ />

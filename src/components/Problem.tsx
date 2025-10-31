@@ -50,7 +50,7 @@ const Problem = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="section bg-white relative" id="problem">
+    <section ref={sectionRef} className="py-20 bg-white relative" id="problem">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%">
