@@ -11,7 +11,7 @@ const ServicesPage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-[#104741] to-white">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-brand-medium to-white">
         <div className="container-custom text-center">
           <h5 className="inline-block px-3 py-1 bg-white/10 text-white rounded-full text-sm font-medium mb-4 animate-fade-in">
             Our Services
